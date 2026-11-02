@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calc.js" defer></script>
+</head>
+<body>
+    <header id="top">
+        <img src="1ogo.png" alt="Логотип сайта 5uchn34tk1d">
+        <nav>
+            <a href="#calc">Калькулятор</a>
+        </nav>
+    </header>
+
+    <main id="calc">
+        <h1>Калькулятор стоимости заказа</h1>
+        Тип товара:<br>
+        <label>
+            <input type="radio" name="field-type" value="1" checked> Ручка — 50 руб.
+        </label><br>
+        <label>
+            <input type="radio" name="field-type" value="2"> Тетрадь — 120 руб.
+        </label><br>
+        <label>
+            <input type="radio" name="field-type" value="3"> Папка — 300 руб.
+        </label><br>
+        <br>
+        <label>
+            Количество товара:<br>
+            <input id="quantity" name="field-quantity" type="text" value="1" placeholder="Введите количество">
+        </label><br>
+        <br>
+        <div id="options-block">
+            <label>
+                Обложка:<br>
+                <select id="option" name="field-option">
+                    <option value="0">Мягкая — +0 руб.</option>
+                    <option value="80">Твёрдая — +80 руб.</option>
+                    <option value="200">Кожаная — +200 руб.</option>
+                </select>
+            </label><br>
+        </div>
+        <div id="property-block">
+            <label>
+                <input id="property" name="field-property" type="checkbox" value="100"> Файлы в комплекте — +100 руб.
+            </label><br>
+        </div>
+        <button id="add-button" type="button">Добавить в заказ</button>
+        <p id="error"></p>
+        <p id="result"></p>
+
+        <h2>Состав заказа</h2>
+        <ul id="order-list"></ul>
+        <p id="total"></p>
+        <button id="clear-button" type="button">Очистить заказ</button>
+    </main>
+
+    <footer>
+        <p> (c) Саенко М. ^_^</p>
+    </footer>
+</body>
+</html>
